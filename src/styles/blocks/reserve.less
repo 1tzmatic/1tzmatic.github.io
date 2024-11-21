@@ -1,0 +1,25 @@
+.reserve{
+    display: grid;
+    grid-template-columns: 405px, 1fr;
+    grid-template-areas: 
+        "checkbox scheme"
+        "order legend";
+    gap: 65px 11%;
+    width: 100%;
+    &__checkbox{
+        grid-area: "checkbox";
+        background-color: red;
+    }
+    &__scheme{
+        grid-area: "scheme";
+        background-color: blue;
+    }
+    &__order{
+        grid-area: "order";
+        background-color: purple;
+    }
+    &__legend{
+        grid-area: "legend";
+        background-color: green;
+    }
+}
