@@ -1,4 +1,5 @@
 .article-card {
+    position: relative;
     box-sizing: border-box;
     display: flex;
     width: 100%;
@@ -7,6 +8,24 @@
         box-shadow: 0 0 30px fade(@black, 55%);
       }
     }
+
+    & + .article-card {
+        margin-top: 120px;
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          margin: 0 auto 60px;
+          bottom: 100%;
+          left: 0;
+          right: 0;
+          width: 100%;
+          max-width: 1254px;
+          height: 1px;
+          background-color: @black;
+          pointer-events: none;
+        }}
+
     &__link {
       flex-shrink: 0;
       align-self: flex-start;
@@ -15,6 +34,14 @@
       margin-right: 60px;
       font-size: 0;
       text-decoration: none;
+      &:hover {
+        & ~ .article-card__info {
+          .article-card__title-link {
+            color: @red;
+            text-decoration-color: @red;
+            }
+        }
+        }
     }
     &__picture {
       display: block;
@@ -38,6 +65,7 @@
       height: 100%;
       object-fit: cover;
     }
+
     &__info {
         box-sizing: border-box;
         position: relative;
@@ -88,23 +116,4 @@
         color: inherit;
         transition: none;
       }
-      position: relative;
-      /* прочие стили */
-      & + .article-card {
-        margin-top: 120px;
-        &::before {
-          content: "";
-          display: block;
-          position: absolute;
-          margin: 0 auto 60px;
-          bottom: 100%;
-          left: 0;
-          right: 0;
-          width: 100%;
-          max-width: 1254px;
-          height: 1px;
-          background-color: @black;
-          pointer-events: none;
-        }
-      }
-  }
+}
