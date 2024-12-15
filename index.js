@@ -1,1 +1,0 @@
-consoel.log("hello from node")
