@@ -1,0 +1,118 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    label.error,
+    span.error {
+      display: block;
+      margin: 5px 0 0;
+      color: #a51505;
+    }
+    &__input,
+    &__textarea {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 5px;
+        border: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.375;
+    }
+    &__input {
+        height: 55px;
+        padding: 17px 20px 16px;
+    }
+
+    &__textarea {
+        height: 150px;
+        padding: 20px;
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.3;
+        color: @black;
+    }
+
+    &__title {
+        margin: 0 0 10px;
+        display: block;
+        color: @black;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.3;
+        color: @black;
+        border: none;
+    }
+    
+    &__select {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        padding: 0 20px;
+        background-color: @white;
+        height: 55px;
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 1.3;
+        color: @black;
+        border: none;
+        cursor: pointer;
+    }
+    &__date {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 250px;
+      }
+    &__date-inputs {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        height: 55px;
+        pointer-events: none;
+        gap: 15px;
+    }
+    &__date-input {
+        box-sizing: border-box;
+        display: block;
+        border: none;
+        background-color: #fff;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.375;
+        width: 55px;
+        height: 55px;
+        padding: 17px 13px 16px;
+        &--w110 {
+            width: 110px;
+        }
+        @media @bw400 {
+            font-size: 14px;
+          }
+          &--year {
+            flex-grow: 1;
+            margin-right: 0;
+          }
+    }
+    &__date-picker {
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        max-width: 250px;
+        height: 55px;
+        border: none;
+        border-radius: 5px;
+        opacity: 0;
+        cursor: pointer; 
+    }
+}

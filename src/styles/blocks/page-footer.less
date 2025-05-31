@@ -1,0 +1,176 @@
+.page-footer {
+    .container;
+    padding-bottom: 75px;
+    @media @bw1170 {
+        padding-bottom: 60px;
+    }
+    @media @bw600 {
+        padding-bottom: 50px;
+    }
+    &__liners {
+        display: flex;
+        margin-bottom: 60px;
+        padding-right: 100px;
+        gap: 100px;
+        @media @bw1660 {
+            gap: 90px;
+        }
+        @media @bw1020 {
+            gap: 50px;
+        }
+        @media @bw600 {
+            gap: 20px;
+        }
+        &::before,
+        &::after {
+            content: '';
+            flex-grow: 1;
+            width: 2px;
+            height: 2px;
+        }
+        &::before {
+            background: linear-gradient(270deg, #1c1b1b 0%, rgba(255,255,255,0) 82.86%);
+        }
+        &::after {
+            background: linear-gradient(90deg, #1c1b1b 0%, rgba(255,255,255,0) 100%);
+        }
+    }
+    &__block {
+        display: flex;
+        gap: 50px;
+        justify-content: space-between;
+        margin-bottom: 60px;
+        @media @bw768 {
+            flex-direction: column;
+        }
+    }
+    &__block-links {
+        position: relative;
+        padding-left: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 4px;
+            background-color: @red;
+        }
+    }
+    &__block-link {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.3;
+        color: @black;
+        transition: color 0.2s;
+        &:hover {
+            @media (hover: hover) {
+                color: @red;
+            }
+        }
+        &:active {
+            color: @red;
+        }
+        @media @bw768 {
+            padding: 2px 0;
+        }
+    }
+    &__block2 {
+        display: grid;
+        grid-template-columns: 1fr 160px 1fr;
+        grid-template-areas: "copyright socials create"
+        "links socials create";
+        @media @bw1020 {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "socials socials"
+            "copyright copyright"
+            "links create";
+        }
+        @media @bw768 {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "socials"
+            "links"
+            "copyright"
+            "create";
+        }
+    }
+    &__socials {
+        grid-area: socials;
+        @media @bw1020 {
+            margin: 0 auto 60px;
+        }
+    }
+    &__block2-links {
+        grid-area: links;
+        display: flex;
+        gap: 60px;
+        @media @bw1340 {
+            gap: 30px;
+        }
+        @media @bw1020 {
+            gap: 15px;
+        }
+        @media @bw768 {
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 16px;
+        }
+    }
+    &__block2-link {
+        text-decoration: none;
+        font-weight: 600;
+        font-weight: 16px;
+        line-height: 1.3;
+        color: @black;
+        transition: color 0.2s;
+        &:hover {
+            @media (hover: hover) {
+                color: @red;
+            }
+        }
+        &:active {
+            color: @red;
+        }
+    }
+    &__copyright {
+        grid-area: copyright;
+        margin-bottom: 20px;
+        @media @bw1020 {
+            margin-bottom: 14px;
+        }
+        @media @bw768 {
+            margin-left: auto;
+        }
+    }
+    &__create {
+        grid-area: create;
+        margin-left: auto;
+        align-self: flex-end;
+        display: flex;
+        align-items: flex-end;
+        gap: 15px;
+        @media @bw768 {
+            margin-left: auto;
+        }
+    }
+    &__create-link {
+        flex-shrink: 0;
+        font-size: 0;
+        color: @black;
+        transition: color 0.2s;
+        &:hover {
+            @media (hover:hover) {
+                color: @red;
+            }
+        }
+        &:active {
+            color: @red;
+        }
+    }
+}

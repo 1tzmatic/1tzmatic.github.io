@@ -1,0 +1,124 @@
+.abc {
+    &__text {
+        box-sizing: border-box;
+        color: @black;
+        padding-left: 40px;
+        text-align: center;
+        margin-top: 97px;
+        margin-bottom: 35px;
+        font-family: @font2;  
+        font-weight: 30;
+        font-size: 22px; 
+    }
+    &__container {
+        .container;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 100px;
+    }
+    &__right-block {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 52px;
+        width: 272px;
+        font-family: @font1;  
+        font-weight: 16px;
+    }
+
+    .btn1 {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 15px 40px;
+        background-color: transparent;
+        text-decoration: none;
+        border: 1px solid #1F1E1E;
+        border-radius: 0;
+        outline: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.3;
+        color: #1F1E1E;
+        transition: background-color 0.2s, color 0.2s;
+    }
+
+    .btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 15px 40px;
+        text-decoration: none;
+        border-radius: 0;
+        outline: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.3;
+        border: 1px solid @red;
+        background-color: @red;
+        color: #ffffff;    
+    }
+
+    &__right-block {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 52px;
+        width: 272px;
+        font-family: @font1;  
+        font-weight: 16px;
+    }
+    
+    &__text2 {
+        margin-top: 130px;
+    }
+
+    &__left-block {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        font-family: @font2;  
+        font-weight: 36px;
+        @media @bw768 {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+        
+    }
+    
+    .btns {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 7px 260px;
+        text-decoration: none;
+        border-radius: 0;
+        outline: none;
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 1.3;
+        background-color: #1F1E1E;
+        color: #ffffff;
+        margin-bottom: 150px;
+        @media @bw1020 {
+            padding: 6px 183px;
+            font-weight: 300;
+            font-size: 24px;
+          }
+          @media @bw600 {
+            padding: 6px 140px;
+            font-weight: 300;
+            font-size: 19px;
+          }
+          @media @bw400 {
+            padding: 11px 105px;
+            font-weight: 300;
+            font-size: 16px;
+          }
+    }
+}
